@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.macro</groupId>
+    <artifactId>mall-swarm</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>mall-swarm</name>
+    <description>macro商城微服务父工程</description>
+    <packaging>pom</packaging>
+
+    <modules>
+            <module>mall-common</module>
+            <!--
+            <module>mall-mbg</module>
+            <module>mall-admin</module>
+            <module>mall-portal</module>
+            <module>mall-search</module>
+            <module>mall-gateway</module>
+            <module>mall-auth</module>
+            <module>mall-monitor</module>
+            <module>mall-demo</module>
+            -->
+        </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-boot.version>2.7.12</spring-boot.version>
+        <spring-cloud.version>2021.0.7</spring-cloud.version>
+        <lombok.version>1.18.30</lombok.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
