@@ -1,29 +1,9 @@
-package com.macro.common;
-
-import lombok.Data;
-
-@Data
-public class CommonResult<T> {
-    private long code;
-    private String message;
-    private T data;
-
-    protected CommonResult() {
-    }
-
-    protected CommonResult(long code, String message, T data) {
-        this.code = code;
-        this.message = message;
-        this.data = data;
-    }
-
-    // 成功返回结果
-    public static <T> CommonResult<T> success(T data) {
-        return new CommonResult<>(200, "操作成功", data);
-    }
-
-    // 失败返回结果
-    public static <T> CommonResult<T> failed(String message) {
-        return new CommonResult<>(500, message, null);
-    }
-}
+/*
+ * This file was originally at the repository root and has been moved to:
+ *   mall-common/src/main/java/com/macro/common/CommonResult.java
+ *
+ * The root copy is kept here as a deprecated placeholder to avoid confusion.
+ * It is not used by Maven builds (source files must be under src/main/java).
+ *
+ * Please edit the file in mall-common module if you need to update CommonResult.
+ */
